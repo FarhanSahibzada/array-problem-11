@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>Array Problem 11</h2>
+
+
+<h2 id="num4"></h2>
+<h2 id="num5"></h2>
+<h2 id="num6"></h2>
+<h2 id="num7"></h2>
+<h2 id="num8"></h2>
+<h2 id="num9"></h2>
+<h2 id="num10"></h2>
+<h2 id="num11"></h2>
+<h2 id="num12"></h2>
+<h2 id="num13"></h2>
+<h2 id="num13.5"></h2>
+<h2 id="num13.8"></h2>
+<h2 id="num14"></h2>
+<h2 id="num15"></h2>
+<h2 id="num16"></h2>
+<h2 id="num17"></h2>
+<h2 id="num18"></h2>
+<h2 id="num19"></h2>
+<h2 id="num20"></h2>
+
+<script>
+
+let num = [2,4,7,12,15,16,22,25]
+
+document.getElementById("num4").innerHTML = num.join(' ') ;
+
+let num2 = num.filter((val) =>{
+    return val%2 === 0 ;
+});
+
+document.getElementById("num5").innerHTML = "After using Filter "+ num2.join(" ") + "<br> <hr><br> <center> reverse string </center>";
+
+
+let paraaa = "Hello World" ;
+
+ document.getElementById("num6").innerHTML = paraaa ;
+
+//  para = para.split(" ") .reverse().join(" ") ;
+
+let reverseee = [];
+
+let counttt = 0 ;
+
+
+for( let i = paraaa.length-1 ; i >=0 ; i--){
+
+    reverseee[counttt++] = paraaa[i];
+
+}
+ document.getElementById("num7").innerHTML = reverseee.join(" ")  + "<br><hr> <br> <center> checking number is prime or not </center> "; 
+
+
+
+let number1 = +prompt("check num is prime or not !!") ;
+
+
+let prime = true ;
+
+
+if ( number1 <= 1 ){
+
+    prime = false ;
+alert("1 and less than 1 are not prime numbers")
+}
+else{
+for( let i = 2 ; i< number1 ; i++){
+
+if( number1%i === 0){
+
+    prime = false ; 
+}
+
+
+}
+
+
+
+}
+
+if( prime ){
+
+    document.getElementById("num8") .innerHTML =`${number1} is the prime number  <hr> <br><center> Finding max number in the array </center>`; 
+}else{
+    document.getElementById("num9") .innerHTML =`${number1} is not prime number <hr> <br> <center> Finding max number in the array </center>`; 
+}
+
+
+
+
+
+
+
+
+
+let number3 = [ 23,43,54,66,74,76,86,89]
+
+document.getElementById("num10").innerHTML = number3 ;
+// let max = Math.max.apply(null, number3)
+
+// console.log(max);
+
+let max = number3[0];
+
+for(let i = 1 ; i < number3.length ; i++){
+
+    if( number3[i] > max){
+
+        max = number3[i] ;
+    }
+}
+
+
+document.getElementById("num11").innerHTML = max  + "<hr><br> <center> Checking Plindrome </center>";
+
+
+
+let para = prompt("Check a Word is palindrome or not").toLowerCase();
+
+let paracheck = para.replace(/[^A-Za-z0-9]/g,''); 
+
+
+
+let prilimode = paracheck.split("").reverse().join("");
+
+
+if (paracheck === prilimode){
+
+    document.getElementById("num12") .innerHTML = `${paracheck}         :Is a Plindrome  <hr> <br> <center> Checking vowels </center>`
+}
+else{
+document.getElementById("num13") .innerHTML = paracheck + "   :Is not a plindrome  <hr> <br> <center> Fabonacci Series </center>"
+}
+                                     /// fibinacci series
+
+let usernum = +prompt("how much fabonacci series you want");
+
+document.getElementById("num13.5") .innerHTML = usernum ; 
+
+
+let a = 0 ; 
+let b = 1 ;
+
+let arr = [0,1];
+
+if ( usernum <= 0 ){
+    alert("Invalid input. Please enter a positive integer.")
+} else if ( usernum === 1){
+
+    alert("please enter above number than 1")
+}
+else{
+
+for( let n = 0 ; n <= usernum ; n++ ){
+
+let join = a + b ;
+ 
+arr.push(join);
+
+a = b ;
+b = join ;
+}
+}
+document.getElementById("num13.8").innerHTML = `here is the fabonacci series ${arr.join("*")} <hr> <br> <center> Checking vowels </center>` 
+
+//// let series = [0,1];
+
+//// for( let n = 2 ; n< usernum ; n++){
+
+//// series.push(series[n -1] + series[n -2] ) 
+//// }
+
+//// console.log(series);
+
+let paragraph = "(my name is Farhan)".toLowerCase();
+
+document.getElementById("num14") .innerHTML = `Here is the paragraph ::    ${paragraph}`
+let vowels = ["a","e","i","o","u"];
+let count = 0 ;
+
+// for ( let char of paragraph){
+
+//     console.log(char);
+// }
+
+for (let i = 0 ; i<paragraph.length ; i++ ){
+
+console.log(paragraph[i]);
+
+if( vowels.includes(paragraph[i])){
+    
+    count++;
+    
+    
+    }
+    }
+    document.getElementById("num15").innerHTML = ` Here is ${count} Vowels coming in the paragraph  <hr> <br> <center> Number of Factorial </center>`;
+    
+    
+    const inputNumber = parseInt(prompt("Enter an integer:"));
+let Factorial = 1 ;
+
+ if (inputNumber < 0) {
+        alert( "Factorial is not defined for negative numbers.");
+    }
+
+    else{
+
+     for( let l = 1 ; l<= inputNumber ; l++){
+
+Factorial *= l ;
+
+}
+    
+}
+
+document.getElementById("num16").innerHTML = ` the factorial of ${inputNumber}  is ${Factorial}<hr> <br> <center> adding integers </center>`
+
+
+let numbers2 = [5,5,5,5];
+
+document.getElementById("num17") .innerHTML = numbers2 ; 
+
+let sum = 0 ;
+
+for( let i = 0 ; i < numbers2.length ; i++){
+
+
+    sum+=numbers2[i]
+}
+
+document.getElementById("num18").innerHTML = `Here is the sum ${sum} <hr> <br> <center> reverse integers </center>`
+
+
+let integer = [23,45,65,32,53];
+
+document.getElementById("num19").innerHTML = integer ;
+
+//let change = integer.reverse() .join(" ")
+
+let change  = [] ; 
+
+let hah = 0 ;
+
+for(let i = integer.length-1 ; i >= 0  ; i--){
+
+change[hah++] = integer[i];
+
+
+}
+
+document.getElementById("num20").innerHTML = change ;
+
+
+</script>
+</body>
+</html>
